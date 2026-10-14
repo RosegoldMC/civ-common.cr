@@ -1,0 +1,4 @@
+name: rosegold-civ-common
+version: 0.1.1
+crystal: ">= 1.17.0"
+license: MIT
