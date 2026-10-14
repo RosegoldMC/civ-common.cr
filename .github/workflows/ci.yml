@@ -1,0 +1,13 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  spec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      - uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: '1.17.1'
+      - run: crystal tool format --check
+      - run: crystal spec
